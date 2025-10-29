@@ -1,13 +1,12 @@
-from pipeline.config import ConfigManager
+from pipeline.api_client import APIClient
+from pprint import pprint
 
 
 if __name__ == "__main__":
-    # # fake_file = "unknownfile.ini"
-    # file = "pipeline.cfg"
-    # config = ConfigManager(file)
+    api_client = APIClient()
+    all_products = api_client.get_all_products()
+    # pprint(all_products)
+    all_users = api_client.get_all_users()
+    # pprint(all_users)
     
-    # base_url = config.get("API", "base_url")
-    # limit = config.get("PAGINATION", "limit")
-    
-    # print(base_url, limit)
     pass

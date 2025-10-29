@@ -24,6 +24,7 @@ class ConfigManager(ConfigParser):
         """
         path_obj = Path(path)
         if not path_obj.exists():
+            #TODO: Include my logger here
             raise FileNotFoundError(f"The Path to the file does not exist")
         return path_obj
 
@@ -32,6 +33,7 @@ class ConfigManager(ConfigParser):
             if self.has_section(section):
                 return dict(self[section])
             else:
+                #TODO: Include my logger here
                 raise ValueError(f"Section '{section}' not found in config file")
         else:
             return {sec: dict(self[sec]) for sec in self.sections()}
