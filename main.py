@@ -1,6 +1,7 @@
 from pipeline.api_client import APIClient
 from pprint import pprint
 from pipeline.data_enricher import DataEnricher
+from pipeline.data_analyzer import Analyzer
 
 
 if __name__ == "__main__":
@@ -12,5 +13,12 @@ if __name__ == "__main__":
     
     enricher = DataEnricher(all_products, all_users)
     df = enricher.enrich_data()
-    pprint(df.head())
+    # pprint(df.head())
+    
+    df_analyzer = Analyzer(df) 
+    analysis = df_analyzer.perform_analysis()
+    
+    pprint(analysis)
+    
+    #Run analysis
     pass

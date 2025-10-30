@@ -20,7 +20,6 @@ class ConfigManager(ConfigParser):
             FileNotFoundError: This is raised if the path does not exists
 
         Returns: A valdi path or None
-            : 
         """
         path_obj = Path(path)
         if not path_obj.exists():
@@ -37,6 +36,3 @@ class ConfigManager(ConfigParser):
                 raise ValueError(f"Section '{section}' not found in config file")
         else:
             return {sec: dict(self[sec]) for sec in self.sections()}
-        
-# manager = ConfigManager("pipeline.cfg")
-# print(manager.settings())
