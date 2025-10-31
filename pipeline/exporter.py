@@ -1,7 +1,5 @@
 # Writes results to shoplink_cleaned.json.
 import json
-import os
-from pathlib import Path
 # import logging
 
 
