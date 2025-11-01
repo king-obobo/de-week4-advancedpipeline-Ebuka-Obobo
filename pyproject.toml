@@ -1,0 +1,11 @@
+[project]
+name = "omnicart-pipeline"
+version = "0.1.0"
+description = "A Simple pipeline to enrich product data with use data from the fake store api"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.3.3",
+    "pytest-cov>=7.0.0",
+    "requests>=2.32.5",
+]
