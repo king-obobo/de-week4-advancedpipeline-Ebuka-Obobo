@@ -1,9 +1,3 @@
-# Responsibility: Generate insights from the enriched data.
-# Functionality: Takes the enriched DataFrame and calculates:
-# Total revenue per seller (username).
-# The number of products sold per seller.
-# The average product price for each seller.
-# Output: Returns a dictionary of dictionaries, where each key is a username.
 import pandas as pd
 
 

@@ -1,10 +1,5 @@
-# Takes two lists of dictionaries (products and users) as input.
-# Converts both into pandas DataFrames.
-# Performs a left-join/merge to enrich the product data with seller information (username, email, and name) using the user ID present in the product data.
-# Handles cases where a product's user might not be in the user list (though unlikely with this API, it's a critical real-world check).
-# Calculates a new column revenue (price * quantity from the rating object, assuming rating.count is quantity for this exercise).
 import pandas as pd
-from pprint import pprint
+
 
 class DataEnricher:
     
@@ -12,15 +7,20 @@ class DataEnricher:
         self.products_data = products_data
         self.users_data = users_data
         
+        
+    def safe_get(self, d, key):
+        return d.get(key) if isinstance(d, dict) else None
+        
     
     def _convert_products_to_df(self):
         # Columns I want: id, category, price, quentity, rrating
+        
         return pd.DataFrame([{
             "id": item.get("id"),
-            "category": item.get("category"),
-            "price": item.get("price"),
-            "quantity": item.get("rating", None).get("count", None),
-            "rating": item.get("rating", None).get("rate", None)
+            "category": item.get("category", None),
+            "price": item.get("price", None),
+            "quantity": self.safe_get(item.get("rating"), "count"),
+            "rating": self.safe_get(item.get("rating"), "rate")
         } for item in self.products_data])
         
         
@@ -28,10 +28,10 @@ class DataEnricher:
         # Username, email, name
         return pd.DataFrame([{
             "id": item.get("id", None),
-            "email": item.get("email"),
-            "user_name": item.get("username"),
-            "first_name": item.get("name", None).get("firstname", None),
-            "last_name": item.get("name", None).get("lastname", None)
+            "email": item.get("email", None),
+            "user_name": item.get("username", None),
+            "first_name" : self.safe_get(item.get("name"), "firstname"),
+            "last_name" : self.safe_get(item.get("name"), "lastname"),
         } for item in self.users_data])
     
         
