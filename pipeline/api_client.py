@@ -20,6 +20,12 @@ class APIClient:
         Returns:
             list[dict]: all products data 
         """
+        if not isinstance(limit, int):
+            raise TypeError("Limit must be an Integer")
+        
+        if limit <= 0:
+            raise ValueError("Limit must be greater than Zero")
+        
         paginated_data = []
         page = 1
         
@@ -70,3 +76,7 @@ class APIClient:
             _dict
         """
         return APIClient.CONFIGMANAGER.settings()
+    
+
+# client = APIClient()
+# print(client.get_config_settings)
