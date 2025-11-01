@@ -1,5 +1,8 @@
 from .config import ConfigManager
+from .logging_config import setup_logger
 import requests
+
+logger = setup_logger(__name__)
 
 class APIClient:
     CONFIG_FILE = "pipeline.cfg"
@@ -21,9 +24,11 @@ class APIClient:
             list[dict]: all products data 
         """
         if not isinstance(limit, int):
+            logger.exception("Limit must be an integer")
             raise TypeError("Limit must be an Integer")
         
         if limit <= 0:
+            logger.exception("Limit must be greater than zero")
             raise ValueError("Limit must be greater than Zero")
         
         paginated_data = []
@@ -33,7 +38,8 @@ class APIClient:
             chunk = data[skip: skip + limit]
             
             # Add a logger here instead
-            print(f"Processing Page {page}: {len(chunk)} items")
+            logger.info(f"Processing Page {page}: {len(chunk)} items")
+            # print(f"Processing Page {page}: {len(chunk)} items")
             paginated_data.extend(chunk)
             page += 1
         
@@ -54,7 +60,8 @@ class APIClient:
             
         except Exception as e:
             #TODO: Set my logger here
-            print(f"An error occurred here: {e}")
+            logger.exception(f"An error occurred here: {e}")
+            # print(f"An error occurred here: {e}")
             
             
     def get_all_users(self):
@@ -65,7 +72,8 @@ class APIClient:
 
         except Exception as e:
             # TODO: ADD MY LOGGGER HERE
-            print(f"An error occured here: {e}")
+            logger.exception(f"An error occurred here: {e}")
+            # print(f"An error occured here: {e}")
             
     
     @property    

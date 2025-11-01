@@ -1,4 +1,7 @@
 from pipeline.pipeline import Pipeline
+from pipeline.logging_config import setup_logger
+
+logger = setup_logger(__name__)
 
 
 if __name__ == "__main__":

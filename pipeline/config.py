@@ -1,5 +1,9 @@
 from configparser import ConfigParser
+from .logging_config import setup_logger
 from pathlib import Path
+
+
+logger = setup_logger(__name__)
 
 class ConfigManager(ConfigParser):
     "A simple ConfigManager class to read my configuration file and provide easy access to the settings"
@@ -24,6 +28,7 @@ class ConfigManager(ConfigParser):
         path_obj = Path(path)
         if not path_obj.exists():
             #TODO: Include my logger here
+            logger.exception(f"The Path to the file does not exist")
             raise FileNotFoundError(f"The Path to the file does not exist")
         return path_obj
 
@@ -33,6 +38,7 @@ class ConfigManager(ConfigParser):
                 return dict(self[section])
             else:
                 #TODO: Include my logger here
+                logger.exception(f"Section '{section}' not found in config file")
                 raise ValueError(f"Section '{section}' not found in config file")
         else:
             return {sec: dict(self[sec]) for sec in self.sections()}

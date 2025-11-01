@@ -89,7 +89,7 @@ def test_get_all_products_returns_paginated_data(mock_get):
 
 # Testing the get_all_products method error
 @patch("pipeline.api_client.requests.get")
-def test_get_all_products_request_exception(mock_get, capsys):
+def test_get_all_products_request_exception(mock_get, caplog):
     # fake_response = Mock()
     mock_get.side_effect = requests.exceptions.RequestException("Network Failure")
     
@@ -97,10 +97,10 @@ def test_get_all_products_request_exception(mock_get, capsys):
     client = APIClient()
     
     result = client.get_all_products()
-    readout = capsys.readouterr()
+    # readout = capsys.readouterr()
     
     assert result == None
-    assert "An error occurred here:" in readout.out
+    assert "An error occurred here:" in caplog.text
     
 # Testing the get_all_users method
 @patch("pipeline.api_client.requests.get")
@@ -158,14 +158,14 @@ def test_get_all_users_returns_data(mock_get):
     ]
     
 @patch("pipeline.api_client.requests.get")
-def test_get_all_users_exception(mock_get, capsys):
+def test_get_all_users_exception(mock_get, caplog):
     mock_get.side_effect = requests.exceptions.RequestException("Network failure")
     
     APIClient.CONFIGMANAGER = FakeConfigManager()
     client = APIClient()
     
     result = client.get_all_users()
-    readout = capsys.readouterr()
+    # readout = capsys.readouterr()
     
     assert result == None
-    assert "An error occured here:" in readout.out
+    assert "Network failure" in caplog.text
