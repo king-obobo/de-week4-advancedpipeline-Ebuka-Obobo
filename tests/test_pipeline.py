@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import patch, MagicMock
 from pipeline.pipeline import Pipeline
+import logging
 
 
 
@@ -44,13 +45,13 @@ def test_pipeline_run_success(mock_api_client, mock_data_enricher, mock_analyzer
     mock_exporter_instance.export_to_json.assert_called_once()
     
 @patch("pipeline.pipeline.APIClient")
-def test_pipeline_run_handles_exception(mock_api_client, capsys):
+def test_pipeline_run_handles_exception(mock_api_client, caplog):
     mock_api_client.side_effect = Exception("API failure")
 
     pipeline = Pipeline()
     pipeline.run()
 
-    captured = capsys.readouterr()
-    assert "An error occured: API failure" in captured.out
+    # captured = capsys.readouterr()
+    assert "An error occured: API failure" in caplog.text
 
     

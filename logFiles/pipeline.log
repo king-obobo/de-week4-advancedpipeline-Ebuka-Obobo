@@ -1,0 +1,250 @@
+2025-11-01 14:43:06,971 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:43:06,989 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:43:06,992 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:43:06,993 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:43:07,002 - pipeline.api_client - ERROR - An error occurred here: Network Failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 55, in get_all_products
+    response = requests.get(f"{self.base_url}/products")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network Failure
+2025-11-01 14:43:07,182 - pipeline.api_client - ERROR - An error occurred here: Network failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 69, in get_all_users
+    response = requests.get(f"{self.base_url}/users")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network failure
+2025-11-01 14:43:07,259 - pipeline.pipeline - ERROR - An error occured: API failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\pipeline.py", line 16, in run
+    api_client = APIClient()
+                 ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+Exception: API failure
+2025-11-01 14:47:37,175 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:47:37,176 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:47:37,181 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:47:37,183 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:47:37,191 - pipeline.api_client - ERROR - An error occurred here: Network Failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 55, in get_all_products
+    response = requests.get(f"{self.base_url}/products")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network Failure
+2025-11-01 14:47:37,198 - pipeline.api_client - ERROR - An error occurred here: Network failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 69, in get_all_users
+    response = requests.get(f"{self.base_url}/users")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network failure
+2025-11-01 14:47:37,268 - pipeline.pipeline - ERROR - An error occured: API failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\pipeline.py", line 16, in run
+    api_client = APIClient()
+                 ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+Exception: API failure
+2025-11-01 14:49:49,982 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:49:49,985 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:49:49,986 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:49:49,986 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:49:49,996 - pipeline.api_client - ERROR - An error occurred here: Network Failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 55, in get_all_products
+    response = requests.get(f"{self.base_url}/products")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network Failure
+2025-11-01 14:49:50,002 - pipeline.api_client - ERROR - An error occurred here: Network failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 69, in get_all_users
+    response = requests.get(f"{self.base_url}/users")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network failure
+2025-11-01 14:49:50,207 - pipeline.pipeline - ERROR - An error occured: API failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\pipeline.py", line 16, in run
+    api_client = APIClient()
+                 ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+Exception: API failure
+2025-11-01 14:50:51,608 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:50:51,610 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:50:51,613 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:50:51,615 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:50:51,621 - pipeline.api_client - ERROR - An error occurred here: Network Failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 55, in get_all_products
+    response = requests.get(f"{self.base_url}/products")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network Failure
+2025-11-01 14:50:51,629 - pipeline.api_client - ERROR - An error occurred here: Network failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 69, in get_all_users
+    response = requests.get(f"{self.base_url}/users")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network failure
+2025-11-01 14:50:51,835 - pipeline.pipeline - ERROR - An error occured: API failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\pipeline.py", line 16, in run
+    api_client = APIClient()
+                 ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+Exception: API failure
+2025-11-01 14:51:52,761 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:51:52,763 - pipeline.api_client - ERROR - Limit must be greater than zero
+NoneType: None
+2025-11-01 14:51:52,764 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:51:52,768 - pipeline.api_client - ERROR - Limit must be an integer
+NoneType: None
+2025-11-01 14:51:52,773 - pipeline.api_client - ERROR - An error occurred here: Network Failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 55, in get_all_products
+    response = requests.get(f"{self.base_url}/products")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network Failure
+2025-11-01 14:51:52,781 - pipeline.api_client - ERROR - An error occurred here: Network failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\api_client.py", line 69, in get_all_users
+    response = requests.get(f"{self.base_url}/users")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+requests.exceptions.RequestException: Network failure
+2025-11-01 14:51:52,823 - pipeline.pipeline - ERROR - An error occured: API failure
+Traceback (most recent call last):
+  File "C:\Users\DELL\Desktop\Data-Epic\omnicart_pipeline\pipeline\pipeline.py", line 16, in run
+    api_client = APIClient()
+                 ^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+Exception: API failure
