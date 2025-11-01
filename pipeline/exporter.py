@@ -16,7 +16,7 @@ class Exporter:
         Performs the Exporting to JSON file action
         """
         try:
-            with open("analysis.json", "w") as file:
+            with open("seller_performance_report.json", "w") as file:
                 json.dump(self.file, file, indent = 4)
             # exporter_logger.info("File 'cleaned_shoplink.json' exported !!!!!")
             print("File 'analysis.json' exported !!!!!")
